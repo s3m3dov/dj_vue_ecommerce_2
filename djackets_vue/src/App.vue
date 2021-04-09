@@ -28,7 +28,7 @@
       </div>
     </nav>
 
-    <section class="sectionn">
+    <section class="section">
       <router-view/>
     </section>
 
@@ -36,7 +36,6 @@
       <p class="has-text-centered">Copyright (c) 2021</p>
     </footer>
   </div>
-  <router-view/>
 </template>
 
 <script>
