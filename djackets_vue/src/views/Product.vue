@@ -43,7 +43,7 @@ export default {
     },
     methods: {
         async getProduct() {
-            this.$store.commit('setISLoading', true)
+            this.$store.commit('setIsLoading', true)
 
             const category_slug = this.$route.params.category_slug
             const product_slug = this.$route.params.product_slug
@@ -59,7 +59,7 @@ export default {
                     console.log(error)
                 })
 
-            this.$store.commit('setISLoading', false)
+            this.$store.commit('setIsLoading', false)
         },
 
         addToCart() {
