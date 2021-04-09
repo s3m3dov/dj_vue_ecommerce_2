@@ -44,18 +44,23 @@ export default {
     
   },
   mounted() {
+    document.title = 'Welcome | Djackets'
     this.getLatestProducts()
   },
   methods: {
-    getLatestProducts() {
-      axios
-      .get('/api/v1/latest-products/')
-      .then((response) => {
-        this.latestProducts = response.data
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    async getLatestProducts() {
+      this.$store.commit('setISLoading', true)
+
+      await axios
+        .get('/api/v1/latest-products/')
+        .then((response) => {
+          this.latestProducts = response.data
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+
+      this.$store.commit('setISLoading', false)
     }
   }
 }
