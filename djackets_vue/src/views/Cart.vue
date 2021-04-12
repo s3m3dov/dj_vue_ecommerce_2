@@ -34,7 +34,7 @@
                 <h2 class="subtitle">Summary</h2>
                 <strong>${{ cartTotalPrice.toFixed(2) }}</strong>, {{ cartTotalLength }} items
                 <hr>
-                <router-link to='/cart/cheeckout' class="button is-dark">Proceed to Checkout</router-link>
+                <router-link to='/cart/checkout' class="button is-dark">Proceed to Checkout</router-link>
             </div>
         </div>
     </div>
